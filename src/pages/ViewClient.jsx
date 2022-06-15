@@ -23,40 +23,49 @@ function ViewClient() {
   }, [])
 
   return (
-    <>
-      <h1 className="font-black text-4xl text-indigo-900">Client Information</h1>
-      <p className='mt-3 text-indigo-400 font-semibold'>View all the client's information!</p>
+    Object.keys(client).length === 0 ? 
+    (
+      <>
+        <h1 className="font-black text-4xl text-indigo-900">Error!</h1>
+        <p className='mt-3 text-indigo-400 font-semibold'>The client that you search for doesn't exists, try another one!</p>
+      </>
+    )
+    : 
+    (
+      <>
+        <h1 className="font-black text-4xl text-indigo-900">Client Information</h1>
+        <p className='mt-3 text-indigo-400 font-semibold'>View all the client's information!</p>
 
-      <p className="text-gray-700 text-2xl mt-10">
-        <span className='uppercase font-bold'>Name: </span>
-        {client.name}
-      </p>
-
-      <p className="text-gray-700 text-2xl mt-4">
-        <span className='text-gray-600 uppercase font-bold'>Enterprise: </span>
-        {client.enterprise}
-      </p>
-
-      <p className="text-gray-700 text-2xl mt-4">
-        <span className='text-gray-600 uppercase font-bold'>Email: </span>
-        {client.email}
-      </p>
-
-      {client.phone && (
-        <p className="text-gray-700 text-2xl mt-4">
-          <span className='text-gray-600 uppercase font-bold'>Phone: </span>
-          {client.phone}
+        <p className="text-gray-700 text-2xl mt-10">
+          <span className='uppercase font-bold'>Name: </span>
+          {client.name}
         </p>
-      )}
 
-      {client.notes && (
         <p className="text-gray-700 text-2xl mt-4">
-          <span className='text-gray-600 uppercase font-bold'>Notes: </span>
-          {client.notes}
+          <span className='text-gray-600 uppercase font-bold'>Enterprise: </span>
+          {client.enterprise}
         </p>
-      )}
-      
-    </>
+
+        <p className="text-gray-700 text-2xl mt-4">
+          <span className='text-gray-600 uppercase font-bold'>Email: </span>
+          {client.email}
+        </p>
+
+        {client.phone && (
+          <p className="text-gray-700 text-2xl mt-4">
+            <span className='text-gray-600 uppercase font-bold'>Phone: </span>
+            {client.phone}
+          </p>
+        )}
+
+        {client.notes && (
+          <p className="text-gray-700 text-2xl mt-4">
+            <span className='text-gray-600 uppercase font-bold'>Notes: </span>
+            {client.notes}
+          </p>
+        )}
+      </>
+    )
   )
 }
 
