@@ -44,7 +44,7 @@ function ClientForm() {
 
   return (
     <div className='bg-white mt-10 px-5 py-10 rounded-md shadow-md md:w-3/4 mx-auto'>
-      <h1 className="text-indigo-700 font-bold text-2xl uppercase text-center">Add a Client</h1>
+      <h1 className="text-indigo-700 font-extrabold text-3xl uppercase text-center">Add a Client</h1>
     
       <Formik
         initialValues={{
