@@ -1,12 +1,3 @@
 {
-  "clients": [
-    {
-      "name": "Sebastian Alvarez",
-      "enterprise": "ioet SAS",
-      "email": "jsalvarez4@espe.edu.ec",
-      "phone": "0992849911",
-      "notes": "Refered by the supervisor",
-      "id": 1
-    }
-  ]
+  "clients": []
 }
