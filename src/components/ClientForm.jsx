@@ -44,7 +44,7 @@ function ClientForm() {
 
   return (
     <div className='bg-white mt-10 px-5 py-10 rounded-md shadow-md md:w-3/4 mx-auto'>
-      <h1 className="text-gray-600 font-bold text-xl uppercase text-center">Add a Client</h1>
+      <h1 className="text-indigo-700 font-bold text-2xl uppercase text-center">Add a Client</h1>
     
       <Formik
         initialValues={{
@@ -68,9 +68,9 @@ function ClientForm() {
             >
               <div className='mb-4'>
                 <label
-                  className='text-gray-800'
+                  className='text-gray-800 font-semibold uppercase'
                   htmlFor='name'
-                >Name:</label>
+                >Name</label>
                 <Field 
                   id='name'
                   name='name'
@@ -89,9 +89,9 @@ function ClientForm() {
 
               <div className='mb-4'>
                 <label
-                  className='text-gray-800'
+                  className='text-gray-800 font-semibold uppercase'
                   htmlFor='enterprise'
-                >Enterprise:</label>
+                >Enterprise</label>
                 <Field 
                   id='enterprise'
                   name='enterprise'
@@ -110,9 +110,9 @@ function ClientForm() {
 
               <div className='mb-4'>
                 <label
-                  className='text-gray-800'
+                  className='text-gray-800 font-semibold uppercase'
                   htmlFor='email'
-                >Email:</label>
+                >Email</label>
                 <Field 
                   id='email'
                   name='email'
@@ -131,9 +131,9 @@ function ClientForm() {
 
               <div className='mb-4'>
                 <label
-                  className='text-gray-800'
+                  className='text-gray-800 font-semibold uppercase'
                   htmlFor='phone'
-                >Phone:</label>
+                >Phone</label>
                 <Field 
                   id='phone'
                   name='phone'
@@ -152,9 +152,9 @@ function ClientForm() {
 
               <div className='mb-4'>
                 <label
-                  className='text-gray-800'
+                  className='text-gray-800 font-semibold uppercase'
                   htmlFor='notes'
-                >Notes:</label>
+                >Notes</label>
                 <Field 
                   as='textarea'
                   id='notes'
