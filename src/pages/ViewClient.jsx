@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import Spinner from '../components/Spinner'
 
 function ViewClient() {
 
   const { id } = useParams()
   const [client, setClient] = useState({})
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => { 
     const getClientFromAPI = async () => {
@@ -20,14 +22,15 @@ function ViewClient() {
       }
     }
     getClientFromAPI()
+    setTimeout(() => setLoading(false), 250) 
   }, [])
 
   return (
-    Object.keys(client).length === 0 ? 
+    loading ? <Spinner /> : Object.keys(client).length === 0 ? 
     (
       <>
-        <h1 className="font-black text-4xl text-indigo-900">Error!</h1>
-        <p className='mt-3 text-indigo-400 font-semibold'>The client that you search for doesn't exists, try another one!</p>
+        <h1 className="font-black text-4xl text-red-900">Error!</h1>
+        <p className='mt-3 text-red-400 font-semibold'>The client that you search for doesn't exists, try another one!</p>
       </>
     )
     : 
