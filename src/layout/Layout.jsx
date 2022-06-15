@@ -8,18 +8,18 @@ function Layout() {
   return (
     <div className='md:flex md:min-h-screen '>
       
-      <div className='md:w-1/4 bg-red-900 px-5 py-10'>
-        <h2 className='text-5xl md:text-2xl lg:text-3xl font-black text-center text-white'>
+      <div className='md:w-1/4 bg-gray-900 px-5 py-10'>
+        <h2 className='text-5xl md:text-2xl lg:text-3xl font-black text-center text-indigo-300'>
           Clients Administrator
         </h2>
         <nav className='mt-10 '>
           <Link 
             to='/clients' 
-            className={`${currentURL === '/clients' ? 'text-red-300' : 'text-white'}  text-2xl block mt-2 hover:text-red-200`}
+            className={`${currentURL === '/clients' ? 'text-indigo-300' : 'text-white'}  text-2xl block mt-2 hover:text-indigo-200`}
           >Clients</Link>
           <Link 
             to='/clients/new' 
-            className={`${currentURL === '/clients/new' ? 'text-red-300' : 'text-white'}  text-2xl block mt-2 hover:text-red-200`}
+            className={`${currentURL === '/clients/new' ? 'text-indigo-300' : 'text-white'}  text-2xl block mt-2 hover:text-indigo-200`}
           >New Client</Link>
         </nav>
       </div>
