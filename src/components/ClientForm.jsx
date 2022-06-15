@@ -1,9 +1,12 @@
 import React from 'react'
 import { Formik, Form, Field } from 'formik'
+import { useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
 import Alert from './Alert'
 
 function ClientForm() {
+
+  const navigate = useNavigate()
 
   const newClientSchema = Yup.object().shape({
     name:        Yup.string()
@@ -20,8 +23,23 @@ function ClientForm() {
                     .positive(),
   })
 
-  const handleSubmit = (values) => {
-    console.log(values);
+  const handleSubmit = async (values) => {
+    try {
+      const URL = 'http://localhost:4000/clients'
+      const response = await fetch(URL, {
+        method: 'POST',
+        body: JSON.stringify(values),
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      })
+
+      const result = await response.json()
+      navigate('/clients')
+
+    } catch(error) {
+      console.log('ERROR:', error);
+    }
   }
 
   return (
@@ -36,7 +54,10 @@ function ClientForm() {
           phone: '',
           notes: '',
         }}
-        onSubmit={ values => handleSubmit(values) }
+        onSubmit={ async (values, {resetForm}) => { 
+          await handleSubmit(values)
+          resetForm()
+        }}
         validationSchema={ newClientSchema }
       >
         {({errors, touched}) => {
