@@ -13,9 +13,7 @@ function Home() {
         const URL = 'http://localhost:4000/clients'
         const response = await fetch(URL)
         const result = await response.json()
-
         setClients(result)
-
       } catch (error) {
         console.log('ERROR:', error)
       }
@@ -23,6 +21,26 @@ function Home() {
     getClientsFromAPI()
     setLoading(false)
   }, [])
+
+  const handleDelete = async (id) => {
+    const response = confirm('Are you sure you want to delete this client?')
+
+    if(response) {
+      try {
+        const URL = `http://localhost:4000/clients/${id}`
+        const response = await fetch(URL, {
+          method: 'DELETE'
+        })
+        await response.json()
+        
+        const updatedClients = clients.filter( clients => clients.id !== id)
+        setClients(updatedClients)
+
+      } catch (error) {
+        console.log('ERROR:', error)
+      }
+    }
+  }
 
   return (
     loading ? <Spinner /> : 
@@ -46,6 +64,7 @@ function Home() {
                 <Client 
                   key={ client.id }
                   client={ client }
+                  handleDelete={ handleDelete }
                 />
             ))}
           </tbody>

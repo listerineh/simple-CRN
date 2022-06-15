@@ -7,30 +7,6 @@
       "phone": "0992849911",
       "notes": "Refered by the supervisor",
       "id": 1
-    },
-    {
-      "name": "Karen Vinueza",
-      "enterprise": "InDesign INC",
-      "email": "karen@gmail.com",
-      "phone": "999845151212",
-      "notes": "",
-      "id": 2
-    },
-    {
-      "name": "Juanita Burbano",
-      "enterprise": "Juana SA",
-      "email": "juana@gmail.com",
-      "phone": "",
-      "notes": "Favorite food: PIZZA",
-      "id": 3
-    },
-    {
-      "name": "Pedro Vaca",
-      "enterprise": "PedritoCoco SA",
-      "email": "pedrito@coco.com",
-      "phone": "45787888895",
-      "notes": "Best seller of 2020",
-      "id": 4
     }
   ]
 }

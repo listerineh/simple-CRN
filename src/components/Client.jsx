@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function Client({ client }) {
+function Client({ client, handleDelete }) {
 
   const navigate = useNavigate()
   const {name, enterprise, email, phone, notes, id} = client
@@ -30,6 +30,7 @@ function Client({ client }) {
           <button 
             type='button'
             className='rounded-md bg-red-500 hover:bg-red-400 block w-full text-white p-2 uppercase font-bold text-xs mt-2' 
+            onClick={() => handleDelete(id)}
           >Delete</button>
         </td>
     </tr>
