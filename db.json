@@ -1,0 +1,28 @@
+{
+  "clients": [
+    {
+      "name": "Sebastian",
+      "enterprise": "ESPE",
+      "email": "jsalvarez4@espe.edu.ec",
+      "phone": "0992849911",
+      "notes": "Test",
+      "id": 1
+    },
+    {
+      "name": "Gloria",
+      "enterprise": "Design",
+      "email": "karen@karen.com",
+      "phone": "999845151212",
+      "notes": "karen",
+      "id": 2
+    },
+    {
+      "name": "Juana",
+      "enterprise": "Juana SA",
+      "email": "juana@gmail.com",
+      "phone": "12345678456",
+      "notes": "Juana wants a melon",
+      "id": 3
+    }
+  ]
+}
