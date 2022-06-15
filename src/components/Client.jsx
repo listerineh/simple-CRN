@@ -11,7 +11,7 @@ function Client({ client }) {
         <td className="p-3">{name}</td>
         <td className="p-3">
           <p><span className='text-gray-800 uppercase font-bold'>Email: </span>{email}</p>
-          <p><span className='text-gray-800 uppercase font-bold'>Phone: </span>{phone}</p>
+          {phone && <p><span className='text-gray-800 uppercase font-bold'>Phone: </span>{phone}</p>}
         </td>
         <td className="p-3">{enterprise}</td>
         <td className="p-3">
@@ -24,6 +24,7 @@ function Client({ client }) {
           <button 
             type='button'
             className='rounded-md bg-yellow-500 hover:bg-yellow-400 block w-full text-white p-2 uppercase font-bold text-xs mt-2' 
+            onClick={() => navigate(`/clients/edit/${id}`) }
           >Edit</button>
 
           <button 

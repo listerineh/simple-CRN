@@ -21,7 +21,7 @@ function Home() {
       }
     }
     getClientsFromAPI()
-    setTimeout(() => setLoading(false), 250) 
+    setLoading(false)
   }, [])
 
   return (

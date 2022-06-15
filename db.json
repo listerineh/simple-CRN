@@ -1,7 +1,7 @@
 {
   "clients": [
     {
-      "name": "Sebastian",
+      "name": "Sebastian Alvarez",
       "enterprise": "ioet SAS",
       "email": "jsalvarez4@espe.edu.ec",
       "phone": "0992849911",
@@ -9,7 +9,7 @@
       "id": 1
     },
     {
-      "name": "Karen",
+      "name": "Karen Vinueza",
       "enterprise": "InDesign INC",
       "email": "karen@gmail.com",
       "phone": "999845151212",
@@ -17,12 +17,20 @@
       "id": 2
     },
     {
-      "name": "Juana",
+      "name": "Juanita Burbano",
       "enterprise": "Juana SA",
       "email": "juana@gmail.com",
       "phone": "",
-      "notes": "Juana wants a melon",
+      "notes": "Favorite food: PIZZA",
       "id": 3
+    },
+    {
+      "name": "Pedro Vaca",
+      "enterprise": "PedritoCoco SA",
+      "email": "pedrito@coco.com",
+      "phone": "45787888895",
+      "notes": "Best seller of 2020",
+      "id": 4
     }
   ]
 }

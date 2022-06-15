@@ -22,7 +22,7 @@ function ViewClient() {
       }
     }
     getClientFromAPI()
-    setTimeout(() => setLoading(false), 250) 
+    setLoading(false)
   }, [])
 
   return (
